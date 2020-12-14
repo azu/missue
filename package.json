@@ -1,0 +1,58 @@
+{
+  "name": "missue",
+  "version": "1.0.0",
+  "description": "A Toolkit help you to management your TODO based on GitHub Issues.",
+  "keywords": [
+    "github",
+    "todo",
+    "issues"
+  ],
+  "homepage": "https://github.com/azu/missue/tree/master/",
+  "bugs": {
+    "url": "https://github.com/azu/missue/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azu/missue.git"
+  },
+  "license": "MIT",
+  "author": "azu",
+  "main": "lib/missue.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "files": [
+    "bin/",
+    "lib/"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
+    "prepare": "git config --local core.hooksPath .githook"
+  },
+  "prettier": {
+    "singleQuote": false,
+    "printWidth": 120,
+    "tabWidth": 4,
+    "trailingComma": "none"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css}": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "debug": "^4.3.1",
+    "@octokit/graphql": "^4.5.8",
+    "@octokit/graphql-schema": "^10.10.1"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.5",
+    "@types/parse-github-url": "^1.0.0",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.2.1",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}
