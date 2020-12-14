@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node build.js",
-    "codegen": "graphql-codegen --config codegen.yml"
+    "build": "node build.js"
   },
   "keywords": [],
   "author": "azu",

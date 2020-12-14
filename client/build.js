@@ -49,6 +49,6 @@ const qoa = require("qoa");
             console.error(error);
             return;
         }
-        console.log("App has been nativefied to", appPath);
+        console.log("App has been built to", appPath);
     });
 })();
