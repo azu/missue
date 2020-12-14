@@ -104,7 +104,9 @@ export type updateCrossReferenceIssuesOptions = {
  * If the state is difference, sync the issue
  * @param options
  */
-export async function updateCrossReferenceIssues(options: updateCrossReferenceIssuesOptions) {
+export async function updateCrossReferenceIssues(
+    options: updateCrossReferenceIssuesOptions
+): Promise<{ updated: boolean; message: string }> {
     const issueQuery = `
         query($owner: String!, $name: String!, $labels: [String!]) {
             repository(owner: $owner, name: $name) {
@@ -128,6 +130,12 @@ export async function updateCrossReferenceIssues(options: updateCrossReferenceIs
         labels: options.labels
     });
     const issueNodes = repository.issues?.nodes ?? [];
+    if (issueNodes.length === 0) {
+        return {
+            updated: false,
+            message: "No issues"
+        };
+    }
     const queryParams = issueNodes
         ?.map((issue) => {
             const match = issue?.body?.match(
@@ -142,6 +150,12 @@ export async function updateCrossReferenceIssues(options: updateCrossReferenceIs
         .filter((param) => param != null) as fetchIssueOrPullRequestParam[];
     const crossRefs = await fetchIssueStatus(queryParams, options);
     debug("crossRefs %o", crossRefs);
+    if (crossRefs.length === 0) {
+        return {
+            updated: false,
+            message: "No cross refs"
+        };
+    }
     const syncIssuesParam: syncIssuesParam[] = [];
     issueNodes.forEach((issueNode, index) => {
         const ref = crossRefs[index];
@@ -168,5 +182,16 @@ export async function updateCrossReferenceIssues(options: updateCrossReferenceIs
             issueId: issueNode.id
         });
     });
-    return syncIssues(syncIssuesParam, options);
+    if (crossRefs.length === 0) {
+        return {
+            updated: false,
+            message: "No need to sync"
+        };
+    }
+    return syncIssues(syncIssuesParam, options).then(() => {
+        return {
+            updated: true,
+            message: "updates!"
+        };
+    });
 }

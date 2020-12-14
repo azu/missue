@@ -28,6 +28,7 @@ const qoa = require("qoa");
         showMenuBar: false,
         fastQuit: false,
         userAgent: "missue", // will infer a default for your current system
+        inject: [path.join(__dirname, "lib/inject.js")],
         ignoreCertificate: false,
         ignoreGpuBlacklist: false,
         enableEs3Apis: false,

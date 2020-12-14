@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build:inject": "webpack",
+    "prebuild": "npm run build:inject",
     "build": "node build.js"
   },
   "keywords": [],
@@ -14,6 +16,9 @@
     "@octokit/graphql-schema": "^10.10.1",
     "nativefier": "^42.0.2",
     "qoa": "^0.2.0",
-    "typescript": "^4.1.3"
+    "ts-loader": "^8.0.12",
+    "typescript": "^4.1.3",
+    "webpack": "^5.10.1",
+    "webpack-cli": "^4.2.0"
   }
 }
