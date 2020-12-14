@@ -35,7 +35,10 @@ const onVisibilityChange = async () => {
     if (document.hidden) {
         return;
     }
-    return syncState().then(() => {
+    return syncState().then((result) => {
+        if (!result?.updated) {
+            return;
+        }
         if (isIssueListPage()) {
             location.reload();
         }
