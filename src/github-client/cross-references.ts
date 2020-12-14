@@ -101,7 +101,7 @@ export type updateCrossReferenceIssuesOptions = {
 /**
  * Get issues that used "CR" Labels,
  * Get Reference issues and pull request states
- * If the state is difference, sync the isssue
+ * If the state is difference, sync the issue
  * @param options
  */
 export async function updateCrossReferenceIssues(options: updateCrossReferenceIssuesOptions) {
