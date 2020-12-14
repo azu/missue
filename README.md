@@ -41,3 +41,7 @@ For bugs and feature requests, [please create an issue](https://github.com/azu/m
 ## License
 
 MIT © azu
+
+## Aknowledge
+
+- [jonabc/sync-task-issues: Sync task issue closure to hierarchical parent tracking issues](https://github.com/jonabc/sync-task-issues)
