@@ -84,15 +84,15 @@ yarn intall
 GITHUB_TOKEN=yourtoken npm run build
 ```
 
-## Changelog
+## Tips
 
-See [Releases page](https://github.com/azu/missue/releases).
+### Pull template changes
 
-## Running tests
+You can merge a template's changes into your todo repository.
 
-Install devDependencies and Run `npm test`:
-
-    npm test
+```
+npm run sync-template
+```
 
 ## Contributing
 
