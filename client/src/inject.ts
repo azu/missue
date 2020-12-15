@@ -48,6 +48,7 @@ const syncState = async () => {
     });
 };
 const onVisibilityChange = async () => {
+    console.log("onVisibilityChange");
     if (document.hidden) {
         return;
     }
@@ -62,6 +63,7 @@ const onVisibilityChange = async () => {
 };
 // on focus
 document.addEventListener("visibilitychange", onVisibilityChange);
+window.addEventListener("focus", onVisibilityChange);
 setInterval(() => {
     syncState().catch((error) => console.error(error));
 }, 1000 * 60 * 5);

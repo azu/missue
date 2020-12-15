@@ -5,4 +5,8 @@ updateCrossReferenceIssues({
     owner: "azu",
     repo: "missue-test",
     token: process.env.GH_TOKEN!
-}).catch((error) => console.error(error));
+})
+    .then((ret) => {
+        console.log(ret);
+    })
+    .catch((error) => console.error(error));

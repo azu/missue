@@ -193,7 +193,7 @@ export async function updateCrossReferenceIssues(
             issueId: issueNode.id
         });
     });
-    if (crossRefs.length === 0) {
+    if (syncIssuesParam.length === 0) {
         return {
             updated: false,
             message: "No need to sync"
