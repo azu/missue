@@ -22,7 +22,7 @@ export const createClient = async () => {
                 repo,
                 title,
                 body: "Refs " + url,
-                label
+                labels: [label]
             });
         }
     };

@@ -46,7 +46,7 @@ const fetchIssueStatus = (
 
 type syncIssuesParam = {
     issueId: string; // GraphQL id!
-    state: "OPENED" | "CLOSED";
+    state: "OPEN" | "CLOSED";
 };
 const syncIssues = async (
     queryParams: syncIssuesParam[],
@@ -56,7 +56,7 @@ const syncIssues = async (
         return;
     }
     const queries = queryParams.map((param, index) => {
-        if (param.state === "OPENED") {
+        if (param.state === "OPEN") {
             return `
   reopen${index}: reopenIssue(input: {issueId: "${param.issueId}" }) {
     issue {
@@ -172,11 +172,12 @@ export async function updateCrossReferenceIssues(
             if (ref.state === "CLOSED" || ref.state === "MERGED") {
                 return "CLOSED";
             }
-            return "OPENED";
+            return "OPEN";
         })();
         if (originalState === refState) {
             return;
         }
+        console.log("originalState === refState", originalState, refState);
         syncIssuesParam.push({
             state: refState,
             issueId: issueNode.id
