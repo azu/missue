@@ -115,6 +115,7 @@ export async function updateCrossReferenceIssues(
                         id
                         body
                         state
+                        url
                     }
                 }
             }
@@ -177,7 +178,7 @@ export async function updateCrossReferenceIssues(
         if (originalState === refState) {
             return;
         }
-        console.log("originalState === refState", originalState, refState);
+        debug("%s: %s === %s", issueNode.url, originalState, refState);
         syncIssuesParam.push({
             state: refState,
             issueId: issueNode.id
