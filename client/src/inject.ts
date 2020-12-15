@@ -48,7 +48,6 @@ const syncState = async () => {
     });
 };
 const onVisibilityChange = async () => {
-    console.log("visible");
     if (document.hidden) {
         return;
     }

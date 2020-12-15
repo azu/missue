@@ -140,7 +140,7 @@ export async function updateCrossReferenceIssues(
     const queryParams = issueNodes
         ?.map((issue) => {
             const match = issue?.body?.match(
-                /https:\/\/github\.com\/(?<owner>.*?)\/(?<repo>.*?)\/(?<type>(issues|pulls))\/(?<number>\d+)/
+                /https:\/\/github\.com\/(?<owner>.*?)\/(?<repo>.*?)\/(?<type>(issues|pull))\/(?<number>\d+)/
             );
             if (!match) {
                 return null;
