@@ -9,7 +9,7 @@ on:
         default: ''
 
 jobs:
-  update-packages:
+  setup-missue:
     runs-on: ubuntu-18.04
     steps:
       - name: checkout

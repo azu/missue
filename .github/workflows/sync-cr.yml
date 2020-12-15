@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  update-packages:
+  sync-cr:
     runs-on: ubuntu-18.04
     steps:
       - name: checkout
