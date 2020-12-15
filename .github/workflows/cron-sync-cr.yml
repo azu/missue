@@ -1,4 +1,4 @@
-name: [Cron] Sync Cross Reference Issues
+name: "Cron: Sync Cross Reference Issues"
 
 on:
   workflow_dispatch: # !!Please this line if you want enable cron!!
