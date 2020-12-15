@@ -2,11 +2,6 @@ name: Setup missue
 
 on:
   workflow_dispatch:
-    inputs:
-      packages:
-        description: ''
-        required: false
-        default: ''
 
 jobs:
   setup-missue:
