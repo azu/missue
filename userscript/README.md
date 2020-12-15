@@ -17,7 +17,7 @@ Open Greasemonkey config and add these value.
 
 - `owner`: owner name of data repository
     - e.g. `"azu"`
-- `repo`: repo name of data repository
+- `repo`: repo repo of data repository
     - e.g. `"missue`
 - `token`: GitHub Token for data repository
     - e.g. `"xxxx"`

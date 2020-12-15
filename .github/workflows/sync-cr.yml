@@ -1,0 +1,19 @@
+name: Sync Cross Reference Issues
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-packages:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: setup Node
+        uses: actions/setup-node@v1
+      - name: setup labels
+        run: npm ci && npm start
+        working-directory: actions/sync-cr
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${GITHUB_REPOSITORY}

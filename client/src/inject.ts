@@ -25,7 +25,7 @@ const syncState = async () => {
     }
     return updateCrossReferenceIssues({
         owner: current.owner,
-        name: current.repo,
+        repo: current.repo,
         labels: ["CR"],
         token: GITHUB_TOKEN
     });

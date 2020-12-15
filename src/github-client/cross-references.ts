@@ -94,7 +94,7 @@ const syncIssues = async (
 export type updateCrossReferenceIssuesOptions = {
     token: string;
     owner: string;
-    name: string;
+    repo: string;
     labels: string[];
 };
 
@@ -126,7 +126,7 @@ export async function updateCrossReferenceIssues(
             authorization: `token ${options.token}`
         },
         owner: options.owner,
-        name: options.name,
+        name: options.repo,
         labels: options.labels
     });
     const issueNodes = repository.issues?.nodes ?? [];
