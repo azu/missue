@@ -15,9 +15,9 @@ You can create new TODO repository based on this repository, and you can start t
 
 ![Template](./docs/template.png)
 
-### Setup
+## Setup
 
-#### Setup TODO labels workflow
+### Setup TODO labels workflow
 
 You can create TODO-like labels for your repository with 1 click.
 
@@ -31,7 +31,7 @@ You can see example labels on <https://github.com/azu/missue/labels>
 
 If you want to add labels, you can edit [labels.yml](.github/labels.yml)
 
-#### Sync "CR" issue's state
+### Sync "CR" issue's state
 
 "CR" is Cross Reference Issues.
 
@@ -47,7 +47,7 @@ Sync "CR" workflow can sync state between original issue and your CR issue.
 2. Click "Run workflow"
 3. Sync CR issue's state
 
-### Client
+## Client
 
 You can get simple electron client.
 
