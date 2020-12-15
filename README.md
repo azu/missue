@@ -63,6 +63,8 @@ Sync "CR" workflow can sync state between original issue and your CR issue.
 3. Add setting to the installed user script
     - Please see [userscript](userscript/) README
 
+![config](docs/config.png)
+
 ## Client
 
 You can get simple electron client.
