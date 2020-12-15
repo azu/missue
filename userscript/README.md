@@ -21,5 +21,5 @@ Open Greasemonkey config and add these value.
     - e.g. `"missue`
 - `token`: GitHub Token for data repository
     - e.g. `"xxxx"`
-- [options: `label`: issue label
+- Optional) `label`: issue label
     - Default: "CR"
