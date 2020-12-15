@@ -17,7 +17,7 @@ jobs:
       - name: setup Node
         uses: actions/setup-node@v1
       - name: setup labels
-        run: npx github-label-sync --access-token "$GITHUB_TOKEN" "$GITHUB_REPOSITORY"
+        run: npx github-label-sync --labels labels.yml --access-token "$GITHUB_TOKEN" "$GITHUB_REPOSITORY"
         working-directory: .github
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
