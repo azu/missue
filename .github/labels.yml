@@ -1,0 +1,131 @@
+# Special
+- name: "CR"
+  color: "7057ff"
+  aliases: []
+  description: "[missue] Cross Referenced Issue."
+# Date & Time
+- name: "📅️ Date:⭐ Today"
+  color: "ff0000"
+  aliases: []
+  description: Today tasks
+- name: "️📅 Date:⏰ Early"
+  color: "ff0000"
+  aliases: []
+  description: Near-future tasks
+- name: "️📅 Date:🕘 Morning"
+  color: "ff0000"
+  aliases: []
+  description: Morning tasks
+- name: "️📅 Date:🕑 Afternoon"
+  color: "ff0000"
+  aliases: []
+  description: Afternoon tasks
+- name: "️📅 Date:🕕 Evening"
+  color: "ff0000"
+  aliases: []
+  description: Evening tasks
+- name: "️📅 Date:⛱ Vacation"
+  color: "ff0000"
+  aliases: []
+  description: Vacation tasks
+- name: "️📅 Date:⏸️ Waiting Response"
+  color: "ff0000"
+  aliases: []
+  description: Waiting response from someone
+# Priority
+- name: "️🔴 Priority:1️⃣ Important/Urgent"
+  color: "7057ff"
+  aliases: []
+  description: Priority Critical
+- name: "️🔴 Priority:2️⃣ Important/Not Urgent"
+  color: "7057ff"
+  aliases: []
+  description: Priority High
+- name: "️🔵 Priority:3️⃣ Not Important/Urgent"
+  color: "7057ff"
+  aliases: []
+  description: Priority Middle
+- name: "️⚪️ Priority:4️⃣ Not Important/Not Urgent"
+  color: "7057ff"
+  aliases: []
+  description: Priority Low
+# Action
+- name: "⚡ Type:🚧 Developing"
+  color: "0e8a16"
+  aliases: []
+  description: Developing tasks
+- name: "⚡ Type:👔 Working"
+  color: "0e8a16"
+  aliases: []
+  description: Working tasks
+- name: "⚡ Type:✍️ Blog"
+  color: "0e8a16"
+  aliases: []
+  description: Blog tasks
+- name: "⚡ Type:📚 Reading"
+  color: "0e8a16"
+  aliases: []
+  description: Reading books or articles
+- name: "⚡ Type:🔎 Research"
+  color: "0e8a16"
+  aliases: []
+  description: Need to research
+- name: "⚡ Type:ℹ️ Need more info"
+  color: "0e8a16"
+  aliases: []
+  description: "Need to get more information. should review again"
+- name: "⚡ Type::octocat: GitHub"
+  color: "0e8a16"
+  aliases: []
+  description: "GitHub task"
+# Device
+- name: "🔌 Device:🖥 Desktop"
+  color: "d4c5f9"
+  aliases: []
+  description: "Prefer to use Desktop"
+- name: "🔌 Device:📱 Mobile"
+  color: "d4c5f9"
+  aliases: []
+  description: "Prefer to use Mobile Phone"
+# Energy
+- name: "️🔋 Energy:⬇Low"
+  color: "fbca04"
+  aliases: []
+  description: Not needed High Energy
+- name: "️🔋 Energy:⬆High"
+  color: "fbca04"
+  aliases: []
+  description: Require High Energy
+# Location
+- name: "📍 Location:🏠 Home"
+  color: "257759"
+  aliases: []
+  description: "In Home"
+- name: "📍 Location:🚪 Arriving (Home)"
+  color: "257759"
+  aliases: []
+  description: "When arriving at home"
+- name: "📍 Location:🏘 Leaving (Home)"
+  color: "257759"
+  aliases: []
+  description: "When leaving from home"
+- name: "📍 Location:🌲 Outside (Home)"
+  color: "257759"
+  aliases: []
+  description: "Outside of home"
+- name: "📍 Location:🚇 Train"
+  color: "257759"
+  aliases: []
+  description: "In train"
+- name: "📍 Location:💰 Bank"
+  color: "257759"
+  aliases: []
+  description: "In Bank"
+- name: "📍 Location:🏢 Office"
+  color: "257759"
+  aliases: []
+  description: "In Office/Company"
+- name: "📍 Location:🎁 Shop"
+  color: "257759"
+  aliases: []
+  description: "In Shop"

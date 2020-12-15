@@ -1,0 +1,23 @@
+name: Setup missue
+
+on:
+  workflow_dispatch:
+    inputs:
+      packages:
+        description: ''
+        required: false
+        default: ''
+
+jobs:
+  update-packages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: setup Node
+        uses: actions/setup-node@v1
+      - name: setup labels
+        run: npx github-label-sync --access-token "$GITHUB_TOKEN" "$GITHUB_REPOSITORY"
+        working-directory: .github
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
