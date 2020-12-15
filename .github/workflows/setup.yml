@@ -15,6 +15,8 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: setup Node
+        with:
+          node-version: 14
         uses: actions/setup-node@v1
       - name: setup labels
         run: npx github-label-sync --labels labels.yml --access-token "$GITHUB_TOKEN" "$GITHUB_REPOSITORY"
