@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "add-item-to-missue",
+  "name": "@missue/add-item-to-missue",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

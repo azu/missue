@@ -14,7 +14,9 @@ jobs:
         with:
           node-version: 14
       - name: Sync CR
-        run: npm ci && npm start
+        run: |
+          yarn install
+          yarn start
         working-directory: actions/sync-cr
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

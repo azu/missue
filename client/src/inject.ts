@@ -1,4 +1,4 @@
-import { updateCrossReferenceIssues } from "../../src/github-client/cross-references";
+import { updateCrossReferenceIssues } from "@missue/github-client";
 
 console.log("Inject: missue scripts");
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
