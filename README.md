@@ -21,7 +21,7 @@ You can create new TODO repository based on this repository, and you can start t
 
 You can create TODO-like labels for your repository with 1 click.
 
-1. Visit <https://github.com/<your-name>/<your-repo>/actions?query=workflow%3A%22Sync+Cross+Reference+Issues%22>
+1. Visit `https://github.com/<your-name>/<your-repo>/actions?query=workflow%3A%22Sync+Cross+Reference+Issues%22`
 2. Click "Run workflow"
 3. Setup labels for your repository
 
@@ -37,7 +37,7 @@ Cross Reference Issues has a link that you want to track and has "CR" label.
 
 Sync "CR" workflow can sync state between original issue and your CR issue.
 
-1. Visit <https://github.com/<your-name>/<your-repo>/actions?query=workflow%3A"Sync+Cross+Reference+Issues">
+1. Visit `https://github.com/<your-name>/<your-repo>/actions?query=workflow%3A"Sync+Cross+Reference+Issues"`
 2. Click "Run workflow"
 3. Sync CR issue's state
 
