@@ -28,7 +28,7 @@
     "lib/"
   ],
   "scripts": {
-    "start": "ts-node index.ts"
+    "start": "ts-node-transpile-only index.ts"
   },
   "dependencies": {
     "debug": "^4.3.1",
