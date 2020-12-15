@@ -2,7 +2,13 @@
 
 A Toolkit help you to management your TODO based on GitHub Issues.
 
-## Usage
+## Purposes
+
+- Use GitHub issues for your personal TODO management
+- Create "public" or "private" repository for your TODO
+- Sync cross-reference(CR) issues for avoiding duplicated issue management
+
+## Installation
 
 > This repository is template.
 
