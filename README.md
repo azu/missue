@@ -25,6 +25,12 @@ You can create TODO-like labels for your repository with 1 click.
 2. Click "Run workflow"
 3. Setup labels for your repository
 
+You can see example labels on <https://github.com/azu/missue/labels>
+
+![labels](./docs/labels.png)
+
+If you want to add labels, you can edit [labels.yml](.github/labels.yml)
+
 #### Sync "CR" issue's state
 
 "CR" is Cross Reference Issues.
