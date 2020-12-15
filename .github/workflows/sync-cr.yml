@@ -13,6 +13,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14
+      - name: Bootstrap
+        run: |
+          yarn install --production
       - name: Sync CR
         run: |
           yarn install

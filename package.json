@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "missue",
   "version": "1.0.0",
   "description": "A Toolkit help you to management your TODO based on GitHub Issues.",
@@ -17,14 +18,8 @@
   },
   "license": "MIT",
   "author": "azu",
-  "main": "lib/missue.js",
-  "directories": {
-    "lib": "lib",
-    "test": "test"
-  },
-  "files": [
-    "bin/",
-    "lib/"
+  "workspaces": [
+    "packages/*"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
