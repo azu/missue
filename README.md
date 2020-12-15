@@ -90,13 +90,22 @@ GITHUB_TOKEN=yourtoken npm run build
 
 ## Tips
 
-### Pull template changes
+### Want to pull this template repository changes
 
 You can merge a template's changes into your todo repository.
 
 ```
 npm run sync-template
 ```
+
+### Add newer issue to your project board automatically
+
+Following probot or GitHub Actions helps you.
+
+- [philschatz/project-bot](https://github.com/philschatz/project-bot)
+- [konradpabjan/actions-add-new-issue-to-column](https://github.com/konradpabjan/actions-add-new-issue-to-column)
+- [takanabe/github-actions-automate-projects️](https://github.com/takanabe/github-actions-automate-projects)
+
 
 ## Contributing
 
