@@ -105,7 +105,7 @@ Following probot or GitHub Actions helps you.
 - [philschatz/project-bot](https://github.com/philschatz/project-bot)
 - [konradpabjan/actions-add-new-issue-to-column](https://github.com/konradpabjan/actions-add-new-issue-to-column)
 - [takanabe/github-actions-automate-projects️](https://github.com/takanabe/github-actions-automate-projects)
-
+- [technote-space/auto-card-labeler](https://github.com/technote-space/auto-card-labeler)
 
 ## Contributing
 
