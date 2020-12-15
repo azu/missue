@@ -70,6 +70,10 @@
   color: "0e8a16"
   aliases: []
   description: Need to research
+- name: "⚡ Type:📩 Mail"
+  color: "0e8a16"
+  aliases: []
+  description: Mail tasks
 - name: "⚡ Type:ℹ️ Need more info"
   color: "0e8a16"
   aliases: []
