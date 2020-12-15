@@ -193,7 +193,7 @@ export async function updateCrossReferenceIssues(
     return syncIssues(syncIssuesParam, options).then(() => {
         return {
             updated: true,
-            message: "updates!"
+            message: `Updates ${syncIssuesParam.length} issues`
         };
     });
 }
