@@ -53,6 +53,22 @@ Sync "CR" workflow can sync state between original issue and your CR issue.
 2. Click "Run workflow"
 3. Sync CR issue's state
 
+### Create "CR" issue from existing issue
+
+"CR" is Cross Reference Issues.
+
+You can create Cross Reference Issues with [userscript](userscript/)
+
+Cross Reference Issues has a link that you want to track and has "CR" label.
+
+- Example: https://github.com/azu/missue/issues/4
+
+Sync "CR" workflow can sync state between original issue and your CR issue.
+
+1. Visit `https://github.com/<your-name>/<your-repo>/actions?query=workflow%3A"Sync+Cross+Reference+Issues"`
+2. Click "Run workflow"
+3. Sync CR issue's state
+
 ## Client
 
 You can get simple electron client.
