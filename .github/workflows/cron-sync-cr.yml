@@ -1,0 +1,31 @@
+name: [Cron] Sync Cross Reference Issues
+
+on:
+  workflow_dispatch: # !!Please this line if you want enable cron!!
+# !!Please # comment out if you want enable cron!!
+#  schedule:
+#    # per 15 min
+#    # https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#scheduled-events
+#    - cron:  '*/15 * * * *'
+
+jobs:
+  sync-cr:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - name: Bootstrap
+        run: |
+          yarn install --production
+      - name: Sync CR
+        run: |
+          yarn install
+          yarn start
+        working-directory: actions/sync-cr
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${GITHUB_REPOSITORY}
