@@ -55,19 +55,13 @@ Sync "CR" workflow can sync state between original issue and your CR issue.
 
 ### Create "CR" issue from existing issue
 
-"CR" is Cross Reference Issues.
+[userscript](userscript/) help you to create "CR" issue
 
-You can create Cross Reference Issues with [userscript](userscript/)
-
-Cross Reference Issues has a link that you want to track and has "CR" label.
-
-- Example: https://github.com/azu/missue/issues/4
-
-Sync "CR" workflow can sync state between original issue and your CR issue.
-
-1. Visit `https://github.com/<your-name>/<your-repo>/actions?query=workflow%3A"Sync+Cross+Reference+Issues"`
-2. Click "Run workflow"
-3. Sync CR issue's state
+1. Install Greasemonkey-like extension
+    - I've tested with [Violentmonkey](https://violentmonkey.github.io/)
+2. Install [add-item-to-missue.user.js](https://github.com/azu/missue/raw/master/userscript/greasemonkey/add-item-to-missue.user.js)
+3. Add setting to the installed user script
+    - Please see [userscript](userscript/) README
 
 ## Client
 
