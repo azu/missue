@@ -38,9 +38,9 @@
       "prettier --write"
     ]
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
+    "cross-spawn": "^7.0.3",
     "lint-staged": "^10.5.3",
     "prettier": "^2.2.1"
   }

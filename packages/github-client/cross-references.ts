@@ -146,10 +146,19 @@ export async function updateCrossReferenceIssues(
                 return null;
             }
             const { owner, repo, type, number } = match.groups || {};
-            return { owner, repo, type, number: String(number) };
+            return {
+                owner,
+                repo,
+                type,
+                number,
+                id: issue!.id,
+                body: issue!.body,
+                state: issue!.state,
+                url: issue!.url
+            };
         })
-        .filter((param) => param != null) as fetchIssueOrPullRequestParam[];
-    const crossRefs = await fetchIssueStatus(queryParams, options);
+        .filter((param) => param != null);
+    const crossRefs = await fetchIssueStatus(queryParams as fetchIssueOrPullRequestParam[], options);
     debug("crossRefs %o", crossRefs);
     if (crossRefs.length === 0) {
         return {
@@ -158,7 +167,7 @@ export async function updateCrossReferenceIssues(
         };
     }
     const syncIssuesParam: syncIssuesParam[] = [];
-    issueNodes.forEach((issueNode, index) => {
+    queryParams.forEach((issueNode, index) => {
         const ref = crossRefs[index];
         if (!issueNode) {
             console.log("Not found issueNode", issueNode);

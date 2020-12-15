@@ -1,17 +1,14 @@
 const path = require("path");
 const nativefier = require("nativefier").default;
-const qoa = require("qoa");
+
 (async () => {
-    const input = {
-        type: "input",
-        query: "Input your issues url:",
-        handle: "url"
-    };
-    // using the `prompt` async method
-    const { url } = await qoa.prompt([input]);
+    const INPUT_URL = process.env.INPUT_URL;
+    if (!INPUT_URL) {
+        throw new Error("INPUT_URL is not defined");
+    }
     const options = {
         name: "missue", // will be inferred if not specified
-        targetUrl: url, // required
+        targetUrl: INPUT_URL, // required
         platform: "darwin", // defaults to the current system
         arch: "x64", // defaults to the current system
         version: require("./package.json").version,

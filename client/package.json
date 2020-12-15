@@ -18,7 +18,6 @@
   "devDependencies": {
     "@missue/github-client": "^1.0.0",
     "nativefier": "^42.0.2",
-    "qoa": "^0.2.0",
     "ts-loader": "^8.0.12",
     "typescript": "^4.1.3",
     "webpack": "^5.10.1",

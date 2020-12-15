@@ -5,6 +5,20 @@ const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 if (!GITHUB_TOKEN) {
     throw new Error("GITHUB_TOKEN is not defined");
 }
+const INPUT_URL = process.env.INPUT_URL;
+if (!INPUT_URL) {
+    throw new Error("INPUT_URL is not defined");
+}
+const isTodoRepo = () => {
+    const pattern = /https:\/\/github\.com\/(?<owner>.*?)\/(?<repo>.*?)\//;
+    const match = INPUT_URL.match(pattern);
+    if (!match) {
+        return;
+    }
+    const { owner, repo } = match.groups ?? {};
+    const current = getCurrent();
+    return owner === current?.owner && repo === current.repo;
+};
 const isIssueListPage = (url: string = location.href) => {
     const pattern = /https:\/\/github\.com\/(?<owner>.*?)\/(?<repo>.*?)\/issues$/;
     return pattern.test(url);
@@ -19,6 +33,9 @@ const getCurrent = (url: string = location.href): { owner: string; repo: string 
     return { owner, repo };
 };
 const syncState = async () => {
+    if (!isTodoRepo()) {
+        return;
+    }
     const current = getCurrent();
     if (!current) {
         return;
