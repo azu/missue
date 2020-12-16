@@ -1,21 +1,56 @@
 import * as chrono from "chrono-node";
+import dayjs from "dayjs";
 
+const customLang = (text: string): string => {
+    return text
+        .replace(/来週/, () => {
+            return dayjs().add(1, "week").format("YYYY年MM月DD日");
+        })
+        .replace(/来月/, () => {
+            return dayjs().add(1, "month").format("YYYY年MM月DD日");
+        })
+        .replace(/来年/, () => {
+            return dayjs().add(1, "year").format("YYYY年MM月DD日");
+        })
+        .replace(/(\d+)週間後/, (_, week) => {
+            return dayjs().add(Number(week), "week").format("YYYY年MM月DD日");
+        })
+        .replace(/([月火水木金土日])曜/, (_, day) => {
+            switch (day) {
+                case "月":
+                    return "monday";
+                case "火":
+                    return "tuesday";
+                case "水":
+                    return "wednesday";
+                case "木":
+                    return "thursday";
+                case "金":
+                    return "friday";
+                case "土":
+                    return "saturday";
+                case "日":
+                    return "sunday";
+                default:
+                    return day;
+            }
+        });
+};
 const parseRemindComment = (comment: string): Date | undefined => {
     const remindCommand = /\/remind\s+(.+)/i;
     const match = comment.match(remindCommand);
     if (!match) {
         return;
     }
-    const body = match[1] as string;
+    const body = customLang(match[1] as string);
     const referenceDate = new Date();
     // https://github.com/wanasit/chrono#locales
     const langs = ["ja", "en"];
     for (const lang of langs) {
-        try {
-            // @ts-expect-error:
-            return chrono[lang].parseDate(body, referenceDate, { forwardDate: true });
-        } catch {
-            return;
+        // @ts-expect-error:
+        const ret = chrono[lang].parseDate(body, referenceDate, { forwardDate: true });
+        if (ret) {
+            return ret;
         }
     }
     return;
@@ -34,5 +69,9 @@ if (require.main) {
         console.log("Can not parsed", comment);
         process.exit(1);
     }
-    console.log(date.getTime());
+    if (process.argv.includes("--debug")) {
+        console.log(date);
+    } else {
+        console.log(date.getTime());
+    }
 }
