@@ -29,7 +29,6 @@ const parseRemindComment = (comment: string): Date | undefined => {
  */
 if (require.main) {
     const comment = process.argv[process.argv.length - 1].trim();
-    console.log("comment", comment);
     const date = parseRemindComment(comment);
     if (!date) {
         console.log("Can not parsed", comment);
