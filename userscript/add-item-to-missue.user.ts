@@ -1,4 +1,5 @@
 import { createClient } from "./github-data";
+import parseGitHubUrl from "parse-github-url";
 
 (async function main() {
     const URLPATTERN = /^https:\/\/github.com\/(?<owner>[0-9a-zA-Z-_.]+)\/(?<repo>[0-9a-zA-Z-_.]+)\/(?<type>(issues|pull))\/(?<number>[0-9]+)/;
@@ -11,8 +12,10 @@ import { createClient } from "./github-data";
     const currentURL = match[0];
     const addItemToProject = async () => {
         const client = await createClient();
+        const repoInfo = parseGitHubUrl(location.href);
+        const prefix = repoInfo?.repository ? `[${repoInfo.repository}] ` : "";
         const issueTitle = document.querySelector(".js-issue-title")?.textContent as string;
-        return client.createIssue(issueTitle, currentURL);
+        return client.createIssue(prefix + issueTitle, currentURL);
     };
     const insertElement = document.querySelector(".thread-subscription-status");
     const addItemButton = document.createElement("button");
