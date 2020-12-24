@@ -85,8 +85,10 @@ git clone https://github.com/azu/missue
 cd missue/
 cd client/
 yarn intall
-GITHUB_TOKEN=yourtoken npm run build
+GITHUB_TOKEN=yourtoken INPUT_URL="https://github.com/your/private-todo/issues" npm run build
 ```
+
+For more details, see [client/](client/).
 
 ## Tips
 
