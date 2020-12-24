@@ -12,6 +12,8 @@ A Toolkit help you to management your TODO based on GitHub Issues.
 - Create "public" or "private" repository for your TODO
 - Sync cross-reference(CR) issues for avoiding duplicated issue management
 
+![Overview](docs/missue-architecture.png)
+
 ## Installation
 
 > This repository is template.
