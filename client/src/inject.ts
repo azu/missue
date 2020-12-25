@@ -1,10 +1,6 @@
 import { updateCrossReferenceIssues } from "@missue/github-client";
 
 console.log("Inject: missue scripts");
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-if (!GITHUB_TOKEN) {
-    throw new Error("GITHUB_TOKEN is not defined");
-}
 const INPUT_URL = process.env.INPUT_URL;
 if (!INPUT_URL) {
     throw new Error("INPUT_URL is not defined");
@@ -39,6 +35,10 @@ const syncState = async () => {
     const current = getCurrent();
     if (!current) {
         return;
+    }
+    const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+    if (!GITHUB_TOKEN) {
+        throw new Error("GITHUB_TOKEN is not defined");
     }
     return updateCrossReferenceIssues({
         owner: current.owner,
