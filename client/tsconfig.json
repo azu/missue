@@ -4,7 +4,6 @@
     "module": "commonjs",
     "lib": [
       "DOM",
-      "ES2020"
     ],
     "strict": true,
     "esModuleInterop": true,

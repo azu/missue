@@ -14,7 +14,7 @@ import parseGitHubUrl from "parse-github-url";
         const client = await createClient();
         const repoInfo = parseGitHubUrl(location.href);
         const prefix = repoInfo?.repository ? `[${repoInfo.repository}] ` : "";
-        const issueTitle = document.querySelector(".js-issue-title")?.textContent as string;
+        const issueTitle = document.querySelector(".js-issue-title")?.textContent?.trim() as string;
         return client.createIssue(prefix + issueTitle, currentURL);
     };
     const insertElement = document.querySelector(".thread-subscription-status");

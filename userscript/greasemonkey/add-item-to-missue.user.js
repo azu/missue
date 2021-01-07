@@ -3121,15 +3121,17 @@ parcelRequire = (function (e, r, t, n) {
                             (u.textContent = "Progressing..."),
                                 (u.disabled = !0),
                                 (async () => {
-                                    var t;
-                                    const e = await p.createClient(),
-                                        n = f.default(location.href),
-                                        o = null != n && n.repository ? "[".concat(n.repository, "] ") : "",
-                                        u =
+                                    var t, e;
+                                    const n = await p.createClient(),
+                                        o = f.default(location.href),
+                                        u = null != o && o.repository ? "[".concat(o.repository, "] ") : "",
+                                        c =
                                             null === (t = document.querySelector(".js-issue-title")) || void 0 === t
                                                 ? void 0
-                                                : t.textContent;
-                                    return e.createIssue(o + u, r);
+                                                : null === (e = t.textContent) || void 0 === e
+                                                ? void 0
+                                                : e.trim();
+                                    return n.createIssue(u + c, r);
                                 })()
                                     .then(() => {
                                         u.textContent = "Added";
