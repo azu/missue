@@ -25,7 +25,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
     "prepare": "git config --local core.hooksPath .githook",
-    "sync-template": " git remote set-url template git@github.com:azu/missue.git && git fetch --all && git merge --allow-unrelated-histories template/master"
+    "sync-template": "git remote add template git@github.com:azu/missue.git 2>/dev/null; git fetch --all && git merge --allow-unrelated-histories template/master"
   },
   "prettier": {
     "singleQuote": false,
