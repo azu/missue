@@ -37,7 +37,8 @@ const nativefier = require("nativefier").default;
         clearCache: false,
         fileDownloadOptions: {
             saveAs: true // always show "Save As" dialog
-        }
+        },
+        internalUrls: ".*?"
         // processEnvs: {
         //     GOOGLE_API_KEY: '<your-google-api-key>',
         // },
