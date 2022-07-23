@@ -1,7 +1,7 @@
 name: "Cron: Sync Cross Reference Issues"
 
 on:
-  workflow_dispatch: # !!Please this line if you want enable cron!!
+  workflow_dispatch:
 # !!Please # comment out if you want enable cron!!
 #  schedule:
 #    # per 15 min
@@ -10,14 +10,14 @@ on:
 
 jobs:
   sync-cr:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: setup Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 16
       - name: Bootstrap
         run: |
           yarn install --production
