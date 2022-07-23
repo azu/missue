@@ -12,6 +12,7 @@ jobs:
       - name: setup Node
         with:
           node-version: 16
+          cache: yarn
         uses: actions/setup-node@v3
       - name: setup labels
         run: npx github-label-sync --labels labels.yml --access-token "$GITHUB_TOKEN" "$GITHUB_REPOSITORY"
